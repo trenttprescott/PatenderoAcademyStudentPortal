@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Patendero Academy — Sweet Comes From Sweat</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box} body{font-family:'Inter',Arial,sans-serif;margin:0;background:#F8FAFF;color:#0A1128}
+.top{max-width:1100px;margin:0 auto;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:#F8FAFF;z-index:10}
+.logo{font-weight:900;font-size:22px;color:#0A2A5E;line-height:1}.logo small{display:block;font-size:10px;letter-spacing:3px;color:#C9A227}.logo span{color:#C9A227}
+/* MODERN BUTTONS - ALL PAGES */
+.btn{padding:12px 20px;border-radius:999px;font-weight:800;border:none;cursor:pointer;font-family:'Inter',Arial;transition:.2s;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.15)}
+.btn:active{transform:scale(.97)}
+.btn-gold{background:linear-gradient(135deg,#E6C34A,#C9A227);color:#111}
+.btn-blue{background:linear-gradient(135deg,#1E4FA3,#0A2A5E);color:#fff}
+.btn-white{background:#fff;color:#0A2A5E;border:1px solid #ddd}
+.btn-green{background:linear-gradient(135deg,#25D366,#128C7E);color:#fff}
+.btn:active{transform:scale(.97)}
+.hero{max-width:1100px;margin:0 auto;padding:20px 20px 10px;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+@media(max-width:750px){.hero{grid-template-columns:1fr}}
+.hero h1{font-size:44px;line-height:1.05;margin:10px 0}.hero h1 span{color:#C9A227}
+.hero p{color:#5A6B8A;font-size:17px;line-height:1.6}
+.badge{background:#FFF3CD;color:#7A5A00;padding:7px 12px;border-radius:999px;font-size:13px;font-weight:800;display:inline-block}
+.mock{background:linear-gradient(135deg,#0A2A5E,#1E4FA3);border-radius:24px;padding:20px;color:#fff;box-shadow:0 20px 40px rgba(10,42,94,.3)}
+.mock .card{background:#fff;color:#111;border-radius:16px;padding:14px;margin-top:14px}
+.mock .bar{height:10px;background:#eee;border-radius:20px;overflow:hidden}.mock .bar div{width:75%;height:100%;background:#C9A227}
+.section{max-width:1100px;margin:0 auto;padding:30px 20px}
+.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px} @media(max-width:750px){.grid{grid-template-columns:1fr}}
+.feat{background:#fff;padding:20px;border-radius:20px;box-shadow:0 5px 20px rgba(0,0,0,.05)}
+.feat h3{margin:8px 0}.feat p{color:#5A6B8A;font-size:14px;line-height:1.5}
+.price{background:#0A2A5E;color:#fff;border-radius:24px;padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:20px} @media(max-width:750px){.price{grid-template-columns:1fr}}
+.price .white{background:#fff;color:#111;border-radius:18px;padding:20px}
+.check{margin:8px 0;font-size:14px}
+.pill{display:inline-block;background:#EEF2FF;padding:6px 12px;border-radius:999px;font-size:13px;font-weight:700;margin:3px}
+.footer{text-align:center;padding:20px;color:#888;font-size:13px}
+/* LIVE CHAT WIDGET */
+#chatBtn{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;border:none;width:60px;height:60px;border-radius:50%;font-size:28px;cursor:pointer;box-shadow:0 8px 20px rgba(0,0,0,.3);z-index:999}
+#chatBox{position:fixed;bottom:90px;right:20px;width:300px;max-width:90vw;background:#fff;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.25);overflow:hidden;display:none;z-index:999;font-family:'Inter',Arial}
+#chatBox .head{background:#0A2A5E;color:#fff;padding:14px;display:flex;gap:10px;align-items:center}
+#chatBox .head b{font-size:14px}#chatBox .head span{font-size:12px;opacity:.8}
+#chatBox .body{padding:14px;font-size:13px;color:#333;line-height:1.5;max-height:220px;overflow:auto}
+#chatBox .msg{background:#F0F2F5;padding:10px;border-radius:12px;margin-bottom:8px}
+#chatBox .btn{width:100%;margin-top:6px}
+</style></head>
+<body>
+<div class="top"><div class="logo">PATENDERO <span>ACADEMY</span><small>SWEET COMES FROM SWEAT</small></div><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn btn-white" onclick="location='parent.html'">For Parents</button><button class="btn btn-white" onclick="location='login.html'">Login</button><button class="btn btn-gold" onclick="location='signup.html'">✨ Sign Up Free →</button></div></div>
+
+<div class="hero">
+<div>
+<span class="badge">✦ PATENDERO ACADEMY • ZIMBABWE • ZIMSEC</span>
+<h1>At Patendero,<br>No Child Is <span>Left Behind.</span></h1>
+<p>Welcome to Patendero Academy. Whether your child is in class in Zimbabwe, sick at home, or studying from abroad — our new Patendero Portal makes sure they never miss a lesson again.</p>
+<div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn btn-gold" onclick="location='signup.html'">✨ Sign Up Free →</button><button class="btn btn-blue" onclick="location='login.html'">Enter Student Portal →</button><button class="btn btn-white" onclick="location='dashboard.html'">See How It Works</button></div>
+<p style="font-size:13px">✅ Works on any phone • ✅ Works on Econet data • ✅ Parent sees every lesson</p>
+<div><span class="pill">Form 1 - Form 6</span><span class="pill">Maths • English • Science</span><span class="pill">ZIMSEC Focused</span></div>
+</div>
+<div class="mock">
+<b>📚 PATENDERO PORTAL — LIVE PREVIEW</b>
+<p style="font-size:13px;opacity:.8">Tawanda Moyo • Form 3 • Patendero Academy</p>
+<div class="card"><b>Maths — Algebra</b><br><span style="font-size:13px;color:#666">Missed Tue • Teacher: Mr. Moyo • 12 min video</span><div class="bar" style="margin-top:8px"><div></div></div><p style="font-size:13px;margin:8px 0">Progress: <b>75% Caught Up</b> at Patendero</p><button class="btn btn-blue" style="width:100%" onclick="location='lesson.html'">▶️ Watch Lesson →</button></div>
+<div style="display:flex;gap:8px;margin-top:10px"><button class="btn btn-white" style="flex:1" onclick="location='parent.html'">👨‍👩‍👧 Parent View</button><button class="btn btn-gold" style="flex:1" onclick="location='teacher.html'">👩‍🏫 Teacher View</button></div>
+</div>
+</div>
+
+<div class="section"><h2 style="text-align:center;font-size:28px">How The Patendero Portal Works</h2>
+<div class="grid" style="margin-top:20px">
+<div class="feat"><div style="font-size:30px">🔁</div><h3>1. Catch Up At Patendero</h3><p>Did Tawanda miss Tuesday Maths? The portal shows exactly what he missed. He watches the 12-min video, does the quiz, and is caught up.</p><button class="btn btn-blue" style="width:100%" onclick="location='lesson.html'">Try Catch Up →</button></div>
+<div class="feat"><div style="font-size:30px">💻</div><h3>2. Study Online With Patendero</h3><p>For students at home or abroad. Full Patendero lessons, notes, and assignments online — same teachers, same motto.</p><button class="btn btn-blue" style="width:100%" onclick="location='dashboard.html'">Open Dashboard →</button></div>
+<div class="feat"><div style="font-size:30px">👨‍👩‍👧</div><h3>3. Parents See Everything</h3><p>Patendero parents open Parent View and see: Watched ✅ Score 8/10 ✅ Missing ❌. Total transparency.</p><button class="btn btn-blue" style="width:100%" onclick="location='parent.html'">Open Parent View →</button></div>
+</div></div>
+
+<div class="section"><div class="price">
+<div><h2 style="margin:0;font-size:30px">For Patendero Parents:<br>Give Your Child<br>The Patendero Advantage.</h2><p style="opacity:.8;line-height:1.6">Your child is already a Patendero student. The Portal makes sure they get 100% of Patendero, even when they miss a day.</p><p style="font-size:28px;font-weight:900">$10 <span style="font-size:14px;font-weight:400;opacity:.7">/month • Catch-Up + Study Online</span></p><button class="btn btn-gold" onclick="location='signup.html'">✨ Sign Up Free →</button><br><br><button class="btn btn-green" onclick="window.open('https://wa.me/263782008195?text=Hi Patendero Academy, I want to join the Patendero Portal for my child')">💬 WhatsApp Us: +263 78 200 8195</button><p style="font-size:13px;opacity:.7">Call / WhatsApp: +263 78 200 8195</p></div>
+<div class="white"><b>What Patendero Students Get:</b><p class="check">✅ All missed lessons from their real Patendero class</p><p class="check">✅ Video + Notes + Quiz for every lesson</p><p class="check">✅ Parent Dashboard for Mum & Dad</p><p class="check">✅ Teacher uploads in 2 minutes</p><p class="check">✅ Works on phone, no app needed</p><p class="check">✅ ZIMSEC-focused Form 1 - Form 4</p><button class="btn btn-blue" style="width:100%;margin-top:10px" onclick="location='signup.html'">Get Started →</button></div>
+</div></div>
+
+<div class="section" style="text-align:center"><h2>"My daughter caught up in one weekend at Patendero."</h2><p style="color:#5A6B8A">— Mrs. Moyo, Patendero Parent, Form 3</p><button class="btn btn-gold" onclick="location='signup.html'">Join Patendero Now →</button></div>
+<div class="footer">PATENDERO ACADEMY • SWEET COMES FROM SWEAT • +263 78 200 8195<br><a href="login.html">Login</a> • <a href="signup.html">Sign Up</a> • <a href="dashboard.html">Dashboard</a> • <a href="parent.html">Parents</a> • <a href="teacher.html">Teachers</a><br>Design by: Virtue Creative Systems</div>
+
+<!-- LIVE CHAT WITH ADMIN -->
+<button id="chatBtn" onclick="document.getElementById('chatBox').style.display=document.getElementById('chatBox').style.display=='block'?'none':'block'">💬</button>
+<div id="chatBox"><div class="head"><div style="width:40px;height:40px;background:#C9A227;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px">P</div><div><b>Patendero Academy Admin</b><br><span>● Online • Replies in minutes</span></div></div>
+<div class="body"><div class="msg"><b>Admin:</b> Hi! Welcome to Patendero Academy 👋 How can we help you today?</div><div class="msg">Are you a <b>Parent</b>, <b>Student</b> or <b>Teacher</b>?</div>
+<button class="btn btn-blue" onclick="window.open('https://wa.me/263782008195?text=Hi Patendero, I am a Parent, I want to join the Portal')">👨‍👩‍👧 I am a Parent</button>
+<button class="btn btn-gold" onclick="location='signup.html'">✨ Sign Up My Child</button>
+<button class="btn btn-green" onclick="window.open('https://wa.me/263782008195?text=Hi Patendero, I want to ask about fees and enrolment')">💬 Chat on WhatsApp</button>
+<p style="text-align:center;color:#888;font-size:12px">Or call: +263 78 200 8195</p>
+</div>
+</div>
+
+<!-- PATENDERO LIVE CHAT + MODERN BUTTONS -->
+<style>.btn-modern{padding:12px 20px;border-radius:999px;font-weight:800;border:none;cursor:pointer;transition:.2s;box-shadow:0 4px 12px rgba(0,0,0,.1)}.btn-modern:hover{transform:translateY(-2px)}</style>
+<button onclick="document.getElementById('pChat').style.display=document.getElementById('pChat').style.display=='block'?'none':'block'" style="position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;border:none;width:60px;height:60px;border-radius:50%;font-size:28px;cursor:pointer;box-shadow:0 8px 20px rgba(0,0,0,.3);z-index:999">💬</button>
+<div id="pChat" style="position:fixed;bottom:90px;right:20px;width:300px;max-width:90vw;background:#fff;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.25);overflow:hidden;display:none;z-index:999;font-family:Arial"><div style="background:#0A2A5E;color:#fff;padding:14px"><b>Patendero Admin</b><br><span style="font-size:12px;opacity:.8">● Online • +263 78 200 8195</span></div><div style="padding:14px;font-size:13px;color:#333"><p style="background:#F0F2F5;padding:10px;border-radius:12px">Hi! How can Patendero help you? 👋</p><button class="btn-modern" style="width:100%;background:#0A2A5E;color:#fff;margin-top:6px" onclick="window.open('https://wa.me/263782008195?text=Hi Patendero, I need help with the Portal')">💬 Chat on WhatsApp</button><button class="btn-modern" style="width:100%;background:#C9A227;margin-top:6px" onclick="location='signup.html'">✨ Sign Up Free</button><button class="btn-modern" style="width:100%;background:#eee;margin-top:6px" onclick="location='index.html'">🏠 Back to Home</button></div></div>
+</body>
+</html>

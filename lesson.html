@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson - Patendero</title>
+<style>
+body{font-family:Arial,sans-serif;background:#F2F4F8;margin:0}
+.top{background:#0A2A5E;color:#fff;padding:16px 20px}
+.wrap{max-width:700px;margin:0 auto;padding:15px}
+.video{background:#111;color:#fff;height:260px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:50px;flex-direction:column}
+.card{background:#fff;padding:16px;border-radius:14px;margin:12px 0}
+.btn{background:#C9A227;border:none;padding:13px;width:100%;border-radius:10px;font-weight:900;font-size:16px;cursor:pointer}
+.opt{display:block;width:100%;text-align:left;padding:12px;margin:8px 0;border:1px solid #ddd;border-radius:10px;background:#fff;cursor:pointer}
+.opt.correct{background:#d4edda}.opt.wrong{background:#f8d7da}
+</style></head>
+<body>
+<div class="top"><button onclick="location='dashboard.html'" style="background:#fff;border:none;padding:6px 10px;border-radius:8px;font-weight:800">← Back</button> <b style="margin-left:10px">PATENDERO <span style="color:#C9A227">ACADEMY</span></b></div>
+<div style="background:#fff;padding:10px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;border-bottom:2px solid #eee;position:sticky;top:0;z-index:10">
+<button onclick="location='index.html'" style="padding:10px 16px;border-radius:999px;border:none;background:linear-gradient(135deg,#E6C34A,#C9A227);font-weight:800;cursor:pointer;box-shadow:0 4px 10px rgba(0,0,0,.1)">🏠 Home</button>
+<button onclick="location='dashboard.html'" style="padding:10px 16px;border-radius:999px;border:none;background:linear-gradient(135deg,#1E4FA3,#0A2A5E);color:#fff;font-weight:800;cursor:pointer;box-shadow:0 4px 10px rgba(0,0,0,.1)">📚 Dashboard</button>
+<button onclick="location='lesson.html'" style="padding:10px 16px;border-radius:999px;border:none;background:#fff;border:1px solid #ddd;font-weight:800;cursor:pointer">▶️ Lesson</button>
+<button onclick="location='parent.html'" style="padding:10px 16px;border-radius:999px;border:none;background:#fff;border:1px solid #ddd;font-weight:800;cursor:pointer">👨‍👩‍👧 Parent</button>
+<button onclick="location='teacher.html'" style="padding:10px 16px;border-radius:999px;border:none;background:#fff;border:1px solid #ddd;font-weight:800;cursor:pointer">👩‍🏫 Teacher</button>
+<button onclick="location='signup.html'" style="padding:10px 16px;border-radius:999px;border:none;background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;font-weight:800;cursor:pointer">✨ Sign Up</button>
+</div>
+<div class="wrap">
+<h2 id="title">Maths — Algebra</h2>
+<p id="topic" style="color:#666"></p>
+<div class="video">▶️<span style="font-size:14px;margin-top:8px">Lesson Video — 12 mins<br>Teacher explains on board</span></div>
+<div class="card"><b>📄 Lesson Notes</b><p style="font-size:14px">1. Algebra = finding the missing number<br>2. Move numbers to other side, change sign<br>3. Example: x + 5 = 12 → x = 7</p><button style="background:#0A2A5E;color:#fff;border:none;padding:10px 14px;border-radius:8px;font-weight:800">Download Notes PDF</button></div>
+<div class="card"><b>✍️ Quick Quiz — Check if you understood</b><p>Solve: x + 7 = 15, what is x?</p>
+<button class="opt" onclick="check(this,false)">A) 5</button>
+<button class="opt" onclick="check(this,true)">B) 8 ✅</button>
+<button class="opt" onclick="check(this,false)">C) 22</button>
+<p id="result" style="font-weight:800"></p>
+</div>
+<button class="btn" onclick="done()">✅ Mark As Complete & Back to Dashboard</button>
+</div>
+<script>
+document.getElementById('title').innerText=localStorage.getItem('p_lesson')||'Maths — Algebra';
+document.getElementById('topic').innerText=localStorage.getItem('p_topic')||'';
+function check(el,ok){document.querySelectorAll('.opt').forEach(b=>b.disabled=true);el.classList.add(ok?'correct':'wrong');document.getElementById('result').innerText=ok?'Correct! Well done — You caught up! 🎉':'Not quite, try again. Hint: 15 - 7 = ?'}
+function done(){alert('Great! Lesson marked complete. Parent will see progress.');window.location='dashboard.html'}
+</script>
+
+<!-- PATENDERO LIVE CHAT + MODERN BUTTONS -->
+<style>.btn-modern{padding:12px 20px;border-radius:999px;font-weight:800;border:none;cursor:pointer;transition:.2s;box-shadow:0 4px 12px rgba(0,0,0,.1)}.btn-modern:hover{transform:translateY(-2px)}</style>
+<button onclick="document.getElementById('pChat').style.display=document.getElementById('pChat').style.display=='block'?'none':'block'" style="position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;border:none;width:60px;height:60px;border-radius:50%;font-size:28px;cursor:pointer;box-shadow:0 8px 20px rgba(0,0,0,.3);z-index:999">💬</button>
+<div id="pChat" style="position:fixed;bottom:90px;right:20px;width:300px;max-width:90vw;background:#fff;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.25);overflow:hidden;display:none;z-index:999;font-family:Arial"><div style="background:#0A2A5E;color:#fff;padding:14px"><b>Patendero Admin</b><br><span style="font-size:12px;opacity:.8">● Online • +263 78 200 8195</span></div><div style="padding:14px;font-size:13px;color:#333"><p style="background:#F0F2F5;padding:10px;border-radius:12px">Hi! How can Patendero help you? 👋</p><button class="btn-modern" style="width:100%;background:#0A2A5E;color:#fff;margin-top:6px" onclick="window.open('https://wa.me/263782008195?text=Hi Patendero, I need help with the Portal')">💬 Chat on WhatsApp</button><button class="btn-modern" style="width:100%;background:#C9A227;margin-top:6px" onclick="location='signup.html'">✨ Sign Up Free</button><button class="btn-modern" style="width:100%;background:#eee;margin-top:6px" onclick="location='index.html'">🏠 Back to Home</button></div></div>
+</body>
+</html>

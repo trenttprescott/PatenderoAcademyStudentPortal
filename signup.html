@@ -1,0 +1,28 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Sign Up — Patendero Academy</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+<style>body{font-family:'Inter',Arial;margin:0;background:#0A2A5E;padding:20px;color:#fff;text-align:center}.card{background:#fff;color:#111;max-width:420px;margin:20px auto;padding:25px;border-radius:16px}.btn{padding:14px;border-radius:999px;font-weight:800;border:none;cursor:pointer;width:100%;margin-top:10px;transition:.2s}.btn:hover{transform:translateY(-2px)}.btn-gold{background:linear-gradient(135deg,#E6C34A,#C9A227)}.btn-blue{background:linear-gradient(135deg,#1E4FA3,#0A2A5E);color:#fff}.btn-green{background:linear-gradient(135deg,#25D366,#128C7E);color:#fff}input,select{width:100%;padding:13px;margin:6px 0;border:1px solid #ddd;border-radius:10px;box-sizing:border-box}</style></head>
+<body><div style="font-weight:900;font-size:26px">PATENDERO <span style="color:#C9A227">ACADEMY</span></div><div style="font-size:11px;letter-spacing:2px;color:#aaa">SWEET COMES FROM SWEAT</div>
+<div class="card"><h2 style="margin:0">✨ Join Patendero Portal</h2><p style="color:#666;font-size:14px">Sign up in 1 minute. Parent or Student.</p>
+<input id="name" placeholder="Parent / Student Name - e.g. Mrs Moyo"><input id="phone" placeholder="WhatsApp Number - e.g. 078 200 8195"><select id="form"><option>Form 1</option><option>Form 2</option><option>Form 3</option><option>Form 4</option></select><select id="mode"><option>Parent - I want to monitor my child</option><option>Student - I want to catch up / study online</option><option>Teacher</option></select>
+<button class="btn btn-gold" onclick="signup()">Create My Account →</button>
+<button class="btn btn-green" onclick="window.open('https://wa.me/263782008195?text=Hi Patendero, I want to sign up: '+document.getElementById('name').value+' - '+document.getElementById('form').value)">💬 Sign Up via WhatsApp: +263 78 200 8195</button>
+<button class="btn btn-blue" onclick="location='login.html'">Already have account? Login →</button><p style="font-size:12px;color:#888"><a href="index.html">← Back to Home</a></p></div>
+<script>
+function signup(){
+  let name = document.getElementById('name').value;
+  let phone = document.getElementById('phone').value;
+  let form = document.getElementById('form').value;
+  if(!name || !phone){ alert('Please enter your name and WhatsApp number'); return; }
+  // Save user
+  let user = {name:name, phone:phone, form:form, progress:0};
+  localStorage.setItem('pat_user', JSON.stringify(user));
+  localStorage.setItem('pat_logged_in', 'yes');
+  alert('Welcome to Patendero, '+name+'! 🎉');
+  location='dashboard.html';
+}
+</script>
+<!-- PATENDERO LIVE CHAT + MODERN BUTTONS -->
+<style>.btn-modern{padding:12px 20px;border-radius:999px;font-weight:800;border:none;cursor:pointer;transition:.2s;box-shadow:0 4px 12px rgba(0,0,0,.1)}.btn-modern:hover{transform:translateY(-2px)}</style>
+<button onclick="document.getElementById('pChat').style.display=document.getElementById('pChat').style.display=='block'?'none':'block'" style="position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;border:none;width:60px;height:60px;border-radius:50%;font-size:28px;cursor:pointer;box-shadow:0 8px 20px rgba(0,0,0,.3);z-index:999">💬</button>
+<div id="pChat" style="position:fixed;bottom:90px;right:20px;width:300px;max-width:90vw;background:#fff;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.25);overflow:hidden;display:none;z-index:999;font-family:Arial"><div style="background:#0A2A5E;color:#fff;padding:14px"><b>Patendero Admin</b><br><span style="font-size:12px;opacity:.8">● Online • +263 78 200 8195</span></div><div style="padding:14px;font-size:13px;color:#333"><p style="background:#F0F2F5;padding:10px;border-radius:12px">Hi! How can Patendero help you? 👋</p><button class="btn-modern" style="width:100%;background:#0A2A5E;color:#fff;margin-top:6px" onclick="window.open('https://wa.me/263782008195?text=Hi Patendero, I need help with the Portal')">💬 Chat on WhatsApp</button><button class="btn-modern" style="width:100%;background:#C9A227;margin-top:6px" onclick="location='signup.html'">✨ Sign Up Free</button><button class="btn-modern" style="width:100%;background:#eee;margin-top:6px" onclick="location='index.html'">🏠 Back to Home</button></div></div>
+</body>
+</html>

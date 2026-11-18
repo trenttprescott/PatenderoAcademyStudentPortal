@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Patendero Academy - Student Portal</title>
+<style>
+body{font-family:Arial,sans-serif;background:#0A2A5E;margin:0;padding:20px;color:#fff;text-align:center}
+.card{background:#fff;color:#111;max-width:420px;margin:20px auto;padding:25px;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+.logo{font-size:28px;font-weight:900;color:#0A2A5E}.logo span{color:#C9A227}
+.motto{font-size:12px;letter-spacing:2px;color:#666;margin-bottom:15px}
+input{width:100%;padding:13px;margin:8px 0;border:1px solid #ddd;border-radius:10px;box-sizing:border-box}
+.mode{display:flex;gap:10px;margin:12px 0}
+.mode button{flex:1;padding:14px;border:2px solid #0A2A5E;border-radius:12px;background:#fff;font-weight:800;cursor:pointer}
+.mode button.active{background:#0A2A5E;color:#fff}
+.go{width:100%;padding:14px;background:#C9A227;border:none;border-radius:10px;font-weight:900;font-size:16px;cursor:pointer}
+.small{font-size:12px;color:#aaa;margin-top:10px}
+</style></head>
+<body>
+<div class="logo">PATENDERO<span>ACADEMY</span></div>
+<div class="motto">SWEET COMES FROM SWEAT</div>
+<div class="card">
+<h2 style="margin:0">Welcome Back, Student</h2>
+<p style="color:#666;font-size:14px">Login to Study Online or Catch Up</p>
+<input id="name" placeholder="Student Name - e.g. Tawanda Moyo">
+<input id="sid" placeholder="Student ID - e.g. PAT-2026-001">
+<p style="text-align:left;font-weight:800;font-size:14px;margin-bottom:5px">Choose Your Mode:</p>
+<div class="mode">
+<button id="bOnline" onclick="pick('online')">📚<br>STUDY ONLINE</button>
+<button id="bCatch" onclick="pick('catchup')" class="active">🔁<br>CATCH UP</button>
+</div>
+<button class="go" onclick="login()">Enter Portal →</button>
+<p class="small">Copyright: Patendero Academy Student + ID to enter</p>
+</div>
+<script>
+let mode='catchup';
+function pick(m){mode=m;document.getElementById('bOnline').classList.toggle('active',m=='online');document.getElementById('bCatch').classList.toggle('active',m=='catchup');}
+function login(){
+  let n=document.getElementById('name').value||'Tawanda Moyo';
+  let id=document.getElementById('sid').value||'PAT-2026-001';
+  // Save for dashboard + parent to use
+  localStorage.setItem('p_name',n);
+  localStorage.setItem('p_id',id);
+  localStorage.setItem('p_mode',mode);
+  // Also save as pat_user so dashboard shows real name
+  let user={name:n, phone:id, form:'Form 3', progress:75};
+  localStorage.setItem('pat_user', JSON.stringify(user));
+  localStorage.setItem('pat_logged_in','yes');
+  alert('Welcome back, '+n+'! 👋');
+  window.location='dashboard.html';
+}
+</script>
+<p style="text-align:center;font-size:13px"><a href="index.html" style="color:#fff">← Back to Home</a></p>
+
+<!-- PATENDERO LIVE CHAT + MODERN BUTTONS -->
+<style>.btn-modern{padding:12px 20px;border-radius:999px;font-weight:800;border:none;cursor:pointer;transition:.2s;box-shadow:0 4px 12px rgba(0,0,0,.1)}.btn-modern:hover{transform:translateY(-2px)}</style>
+<button onclick="document.getElementById('pChat').style.display=document.getElementById('pChat').style.display=='block'?'none':'block'" style="position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;border:none;width:60px;height:60px;border-radius:50%;font-size:28px;cursor:pointer;box-shadow:0 8px 20px rgba(0,0,0,.3);z-index:999">💬</button>
+<div id="pChat" style="position:fixed;bottom:90px;right:20px;width:300px;max-width:90vw;background:#fff;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.25);overflow:hidden;display:none;z-index:999;font-family:Arial"><div style="background:#0A2A5E;color:#fff;padding:14px"><b>Patendero Admin</b><br><span style="font-size:12px;opacity:.8">● Online • +263 78 200 8195</span></div><div style="padding:14px;font-size:13px;color:#333"><p style="background:#F0F2F5;padding:10px;border-radius:12px">Hi! How can Patendero help you? 👋</p><button class="btn-modern" style="width:100%;background:#0A2A5E;color:#fff;margin-top:6px" onclick="window.open('https://wa.me/263782008195?text=Hi Patendero, I need help with the Portal')">💬 Chat on WhatsApp</button><button class="btn-modern" style="width:100%;background:#C9A227;margin-top:6px" onclick="location='signup.html'">✨ Sign Up Free</button><button class="btn-modern" style="width:100%;background:#eee;margin-top:6px" onclick="location='index.html'">🏠 Back to Home</button></div></div>
+</body>
+</html>
